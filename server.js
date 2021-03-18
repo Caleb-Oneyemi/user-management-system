@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, './public')));
 
 app.use('/', indexRouter);
 
-const PORT = 8080;
+const PORT = 3000;
 
 app.listen(PORT, () => {
     console.log(`app listening on port ${PORT}`);
