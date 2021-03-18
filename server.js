@@ -8,8 +8,6 @@ const connectDB = require('./server/db/connection');
 
 const app = express();
 
-dotenv.config();
-
 connectDB();
 
 app.set('views', path.join(__dirname, './views'));
@@ -23,7 +21,7 @@ app.use(express.static(path.join(__dirname, './public')));
 
 app.use('/', indexRouter);
 
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 
 app.listen(PORT, () => {
     console.log(`app listening on port ${PORT}`);
