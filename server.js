@@ -8,6 +8,8 @@ const connectDB = require('./server/db/connection');
 
 const app = express();
 
+dotenv.config();
+
 connectDB();
 
 app.set('views', path.join(__dirname, './views'));
