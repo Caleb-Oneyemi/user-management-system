@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 exports.homeRoutes = (req, res) => {
-    axios.get('http://localhost:3000/api/users').then((response) => {
+    axios.get('https://usermanagementsystemapp.herokuapp.com/api/users').then((response) => {
         res.render('index', {
             users: response.data
         });
@@ -16,7 +16,7 @@ exports.addUser = (req, res) => {
 }
 
 exports.updateUser = (req, res) => {
-    axios.get(`http://localhost:3000/api/users/${req.query.id}`)
+    axios.get(`https://usermanagementsystemapp.herokuapp.com/api/users/${req.query.id}`)
         .then((userdata) => {
             res.render('update_user', {
                 user: userdata.data
